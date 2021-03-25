@@ -1,6 +1,8 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { DateTime } from 'luxon';
+
 import './Table.scss';
 export default function Table() {
   const [pmData, setPmData] = useState([]);
@@ -39,11 +41,15 @@ export default function Table() {
         </tr>
       </thead>
       <tbody>
-        {pmData.map(p => (
+        {pmData.map((p, i) => (
           <tr>
             <td>{p.location}</td>
             <td>{p.pm25}</td>
-            <td>{p.lastUpdated}</td>
+            <td>
+              {DateTime.fromISO(p.lastUpdated)
+                .setLocale('en')
+                .toFormat('f')}
+            </td>
           </tr>
         ))}
       </tbody>
