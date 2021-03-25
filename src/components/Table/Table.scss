@@ -1,0 +1,26 @@
+table {
+  width: 100%;
+}
+
+th {
+  background-color: #908b6d;
+  color: #412727;
+  text-transform: uppercase;
+}
+
+th:first-child {
+  text-align: left;
+}
+
+th:nth-child(2) {
+  text-align: center;
+}
+
+td:nth-child(2) {
+  text-align: center;
+}
+
+th,
+td:last-child {
+  text-align: right;
+}
