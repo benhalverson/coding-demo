@@ -2,7 +2,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './Table.scss';
-// import TableRow from './TableRow';
 export default function Table() {
   const [pmData, setPmData] = useState([]);
   const URL =
@@ -10,6 +9,7 @@ export default function Table() {
 
   const getData = async () => {
     const { data } = await axios.get(URL);
+    const newArray = [];
     data.records.map(record => {
       const fields = record?.fields;
       const city = fields?.city;
@@ -20,11 +20,10 @@ export default function Table() {
       data.location = `${city}, ${country}`;
       data.pm25 = measurementValue;
       data.lastUpdated = measurementLastUpdate;
-      setPmData(data);
-      return data;
+      newArray.push(data);
+      return newArray;
     });
-    console.log('pmData', pmData);
-    // setPmData(data);
+    setPmData(newArray);
   };
   useEffect(() => {
     getData().catch(e => console.log('Error', e));
@@ -35,23 +34,18 @@ export default function Table() {
       <thead>
         <tr>
           <th>location</th>
-          <th>pm</th>
+          <th>pm2.5</th>
           <th>last updated</th>
         </tr>
       </thead>
       <tbody>
-        <tr>
-          {/* {pmData.map(p => {
-            console.log('p', p);
-            return (
-              <>
-                <td>p.location</td>
-                <td>p.pm25</td>
-                <td>p.lastupdated</td>
-              </>
-            );
-          })} */}
-        </tr>
+        {pmData.map(p => (
+          <tr>
+            <td>{p.location}</td>
+            <td>{p.pm25}</td>
+            <td>{p.lastUpdated}</td>
+          </tr>
+        ))}
       </tbody>
     </table>
   );
