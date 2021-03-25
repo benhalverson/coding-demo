@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './Table.scss';
@@ -23,31 +24,35 @@ export default function Table() {
       return data;
     });
     console.log('pmData', pmData);
-    setPmData(data);
+    // setPmData(data);
   };
   useEffect(() => {
-    getData();
+    getData().catch(e => console.log('Error', e));
   }, []);
 
   return (
     <table>
-      <th>
-        <td>location</td>
-        <td>pm2.5</td>
-        <td>last updated</td>
-      </th>
-
-      <tr>
-        {pmData.map(p => {
-          console.log('p', p);
-        })}
-
-        <>
-          <td>p.location</td>
-          <td>p.pm25</td>
-          <td>p.lastupdated</td>
-        </>
-      </tr>
+      <thead>
+        <tr>
+          <th>location</th>
+          <th>pm</th>
+          <th>last updated</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          {/* {pmData.map(p => {
+            console.log('p', p);
+            return (
+              <>
+                <td>p.location</td>
+                <td>p.pm25</td>
+                <td>p.lastupdated</td>
+              </>
+            );
+          })} */}
+        </tr>
+      </tbody>
     </table>
   );
 }
