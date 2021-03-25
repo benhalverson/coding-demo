@@ -1,7 +1,9 @@
+import './Header.scss';
+import logo from '../../images/logo.svg';
 export default function Header() {
   return (
     <header>
-      <img className='logo' src='../images/logo.png' alt='company logo' />
+      <img className='logo' src={logo} alt='company logo' />
       <nav className='nav-bar'>
         <ul className='nav-bar-list'>
           <li>Link</li>

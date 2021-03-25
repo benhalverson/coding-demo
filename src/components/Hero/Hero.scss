@@ -1,0 +1,20 @@
+@import '../../styles/base/variables';
+
+.image-section {
+  align-items: center;
+  background-image: url('../../images/wildfire-bg.jpg');
+  background-position-y: 60%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: $white;
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+  justify-content: center;
+  width: 100%;
+}
+
+.hero-content-container,
+.hero-content-text {
+  max-width: 1440px;
+}

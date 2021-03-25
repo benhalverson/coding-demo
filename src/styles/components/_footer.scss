@@ -1,0 +1,16 @@
+@import '../base/variables';
+
+footer {
+  background-color: $dark-yellow;
+  color: $dark-gray;
+  color: $white;
+  display: flex;
+  justify-content: center;
+  padding: 3%;
+  width: 100%;
+}
+
+.footer-text {
+  text-transform: uppercase;
+  width: 1440px;
+}
