@@ -1,0 +1,67 @@
+@media screen and (min-width: 375px) and (max-width: 667px) {
+  h1 {
+    font-size: 1.6em;
+    line-height: 1.2;
+    padding-bottom: 0.5em;
+    font-weight: bold;
+  }
+
+  section {
+    padding: 8%;
+  }
+
+  .section-container {
+    padding-top: 2rem;
+  }
+
+  .section-text {
+    padding-top: 1.3rem;
+  }
+
+  .logo {
+    height: auto;
+    width: 50%;
+  }
+
+  .nav-bar-ul {
+    gap: 7%;
+  }
+
+  .hero-content-text {
+    font-size: 1.5em;
+  }
+}
+
+@media screen and (min-width: 668px) and (max-width: 1280px) {
+  .logo {
+    width: 19%;
+  }
+
+  .nav-bar-ul {
+    gap: 7%;
+  }
+
+  .image-section {
+    align-items: flex-start;
+  }
+}
+@media screen and (min-width: 1281px) and (max-width: 1440px) {
+  .image-section {
+    align-items: flex-start;
+  }
+}
+@media screen and (min-width: 1441px) {
+  header,
+  .hero-content-text .section-container,
+  .section-light-green,
+  .section-dark-green,
+  .section-yellow,
+  .footerText {
+    max-width: 1440px;
+  }
+
+  .bannnerSection_content,
+  .initialSection_content {
+    width: 1440px;
+  }
+}

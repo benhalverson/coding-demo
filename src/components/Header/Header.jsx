@@ -1,4 +1,5 @@
 import './Header.scss';
+import '../../styles/base/_mq.scss';
 import logo from '../../images/logo.svg';
 export default function Header() {
   return (

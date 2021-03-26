@@ -11,13 +11,13 @@ function App() {
       <Hero />
       <section className='section'>
         <div className='section-container'>
-          <h1>lorem title</h1>
+          <h1>Lorem ipsum dolor sit amet</h1>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Rhoncus
             est pellentesque elit ullamcorper dignissim.
           </p>
-          <p>
+          <p className='section-text'>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Id
             consectetur purus ut faucibus pulvinar.
