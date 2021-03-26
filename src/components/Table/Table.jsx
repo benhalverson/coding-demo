@@ -7,7 +7,7 @@ import './Table.scss';
 export default function Table() {
   const [pmData, setPmData] = useState([]);
   const URL =
-    'https://public.opendatasoft.com/api/records/1.0/search/?dataset=us-air-quality-measurements&q=&rows=10&start=1&sort=-measurements_parameter&facet=city&facet=location&facet=measurements_unit&facet=measurements_parameter&facet=measurements_lastupdated';
+    'https://public.opendatasoft.com/api/records/1.0/search/?dataset=us-air-quality-measurements&q=&facet=cou_text_en&facet=country&facet=city&facet=location&facet=measurements_parameter&facet=measurements_lastupdated';
 
   const getData = async () => {
     const { data } = await axios.get(URL);
@@ -42,7 +42,7 @@ export default function Table() {
       </thead>
       <tbody>
         {pmData.map((p, i) => (
-          <tr>
+          <tr key={i}>
             <td>{p.location}</td>
             <td>{p.pm25}</td>
             <td>

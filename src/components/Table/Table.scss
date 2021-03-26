@@ -1,10 +1,13 @@
+@import '../../styles/base/variables';
+
 table {
   width: 100%;
+  color: $darker-yellow;
 }
 
 th {
-  background-color: #908b6d;
-  color: #412727;
+  background-color: $dark-yellow;
+  color: $dark-red;
   text-transform: uppercase;
 }
 
