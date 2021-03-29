@@ -16,10 +16,10 @@ $rectangle-height: 50px;
 
 @keyframes skeleton {
   0% {
-    background-position: -327px 0;
+    background-position: -326px 0;
   }
   100% {
-    background-position: 327px 0;
+    background-position: 326px 0;
   }
 }
 
@@ -80,16 +80,15 @@ $rectangle-height: 50px;
 .circle-line {
   background-image: linear-gradient(to right, #d84855, #d84855, #d84855);
   background-repeat: no-repeat;
+  border-radius: 50%;
+  height: 50px;
   position: relative;
   width: 50px;
-  height: 50px;
-  border-radius: 50%;
 }
 
 .container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr;
-  gap: 0em 1em;
   grid-template-areas: 'box box' 'rectangle circle';
 }
