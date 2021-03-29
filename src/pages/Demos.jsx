@@ -1,6 +1,5 @@
 import React from 'react';
 import Header from '../components/Header/Header';
-// import '../styles/styles.scss';
 import RainbowBox from '../components/RainbowBox/RainbowBox';
 import Loader from '../components/Loader/Loader';
 

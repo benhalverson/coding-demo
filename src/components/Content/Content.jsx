@@ -1,4 +1,6 @@
 import Table from '../Table/Table';
+import './Content.scss';
+
 export default function Content() {
   return (
     <>
