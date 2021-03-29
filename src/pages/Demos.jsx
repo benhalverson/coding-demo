@@ -17,7 +17,7 @@ export default function Demos() {
       </section>
       <section>
         <p>Animated rainbow box</p>
-        <div>box</div>
+        <div>Sorry ran out of time for this...</div>
       </section>
       <section>
         <p>skeleton loading elements</p>

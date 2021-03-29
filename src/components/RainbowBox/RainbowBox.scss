@@ -23,12 +23,31 @@
   grid-area: red;
   background-color: #e92d31;
   height: 30px;
+  // transform: skew(15deg);
+}
+
+.red::before {
+  content: '';
+  width: 0;
+  border-top: 50px solid #e92d31;
+  border-left: 47px solid transparent;
+  position: absolute;
+  left: 315px;
 }
 
 .blue {
   grid-area: blue;
   background-color: #0048b6;
   height: 30px;
+}
+
+.blue::after {
+  content: '';
+  width: 0;
+  border-top: 100px solid #0048b6;
+  border-right: 50px solid transparent;
+  position: absolute;
+  left: 500px;
 }
 
 .dark-green {
