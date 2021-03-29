@@ -1,45 +1,96 @@
-$orange: oranage;
-$red: red;
-$blue: blue;
-$dark-green: green;
-$light-green: olive;
-$yellow: yellow;
-
 .grid-container {
   display: grid;
-
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr;
   gap: 0px 0px;
   grid-template-areas:
-    'top-bar top-bar top-bar top-bar'
-    'left-side content content right-side'
-    'left-side content content right-side'
-    'bottom-bar bottom-bar bottom-bar bottom-bar';
+    'orange red blue dark-green'
+    'yellow2 white white light-green'
+    'light-green2 white white yellow'
+    'dark-green2 blue2 red2 orange2';
   width: 400px;
+  height: 400px;
 }
 
-.top-bar {
-  grid-area: top-bar;
-  background-color: red;
+.orange {
+  grid-area: orange;
+  background-color: #f97c25;
+  height: 100px;
+  width: 100px;
 }
 
-.right-side {
-  grid-area: right-side;
-  background-color: orange;
+.red {
+  grid-area: red;
+  background-color: #e92d31;
+  height: 30px;
 }
 
-.bottom-bar {
-  grid-area: bottom-bar;
-  background-color: green;
+.blue {
+  grid-area: blue;
+  background-color: #0048b6;
+  height: 30px;
 }
 
-.left-side {
-  grid-area: left-side;
-  background-color: blue;
+.dark-green {
+  grid-area: dark-green;
+  background-color: #01ad61;
+  width: 100px;
+  height: 100px;
 }
 
-.content {
-  grid-area: content;
-  text-align: center;
+.light-green {
+  grid-area: light-green;
+  background-color: #7cc53e;
+  width: 100px;
+  height: 100px;
+}
+
+.yellow {
+  grid-area: yellow;
+  width: 100px;
+  height: 100px;
+  background-color: #ffd23d;
+}
+
+.orange2 {
+  grid-area: orange2;
+  background-color: #f97c25;
+}
+
+.red2 {
+  grid-area: red2;
+  background-color: #e92d31;
+}
+
+.blue2 {
+  grid-area: blue2;
+  background-color: #0048b6;
+}
+
+.dark-green2 {
+  grid-area: dark-green2;
+  background-color: #01ad61;
+}
+
+.light-green2 {
+  grid-area: light-green2;
+  background-color: #7cc53e;
+}
+
+.yellow2 {
+  grid-area: yellow2;
+  width: 100px;
+  height: 100px;
+  background-color: #ffd23d;
+}
+
+.white {
+  grid-area: white;
+  background-color: #fff;
+  z-index: 1;
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  left: 260px;
+  top: 238px;
 }
