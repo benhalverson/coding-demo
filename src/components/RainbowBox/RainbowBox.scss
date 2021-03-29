@@ -1,3 +1,10 @@
+$orange: #f97c25;
+$red: #e92d31;
+$blue: #0048b6;
+$dark-green: #01ad61;
+$light-green: #7cc53e;
+$yellow: #ffd23d;
+
 .grid-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -14,22 +21,21 @@
 
 .orange {
   grid-area: orange;
-  background-color: #f97c25;
+  background-color: $orange;
   height: 100px;
   width: 100px;
 }
 
 .red {
   grid-area: red;
-  background-color: #e92d31;
+  background-color: $red;
   height: 30px;
-  // transform: skew(15deg);
 }
 
 .red::before {
   content: '';
   width: 0;
-  border-top: 50px solid #e92d31;
+  border-top: 50px solid $red;
   border-left: 47px solid transparent;
   position: absolute;
   left: 315px;
@@ -37,14 +43,14 @@
 
 .blue {
   grid-area: blue;
-  background-color: #0048b6;
+  background-color: $blue;
   height: 30px;
 }
 
 .blue::after {
   content: '';
   width: 0;
-  border-top: 100px solid #0048b6;
+  border-top: 100px solid $blue;
   border-right: 50px solid transparent;
   position: absolute;
   left: 500px;
@@ -52,14 +58,14 @@
 
 .dark-green {
   grid-area: dark-green;
-  background-color: #01ad61;
+  background-color: $dark-green;
   width: 100px;
   height: 100px;
 }
 
 .light-green {
   grid-area: light-green;
-  background-color: #7cc53e;
+  background-color: $light-green;
   width: 100px;
   height: 100px;
 }
@@ -68,44 +74,44 @@
   grid-area: yellow;
   width: 100px;
   height: 100px;
-  background-color: #ffd23d;
+  background-color: $yellow;
 }
 
 .orange2 {
   grid-area: orange2;
-  background-color: #f97c25;
+  background-color: $orange;
 }
 
 .red2 {
   grid-area: red2;
-  background-color: #e92d31;
+  background-color: $red;
 }
 
 .blue2 {
   grid-area: blue2;
-  background-color: #0048b6;
+  background-color: $blue;
 }
 
 .dark-green2 {
   grid-area: dark-green2;
-  background-color: #01ad61;
+  background-color: $dark-green;
 }
 
 .light-green2 {
   grid-area: light-green2;
-  background-color: #7cc53e;
+  background-color: $light-green;
 }
 
 .yellow2 {
   grid-area: yellow2;
   width: 100px;
   height: 100px;
-  background-color: #ffd23d;
+  background-color: $yellow;
 }
 
 .white {
   grid-area: white;
-  background-color: #fff;
+  background-color: #ffffff;
   z-index: 1;
   position: absolute;
   width: 350px;
