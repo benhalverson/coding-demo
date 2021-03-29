@@ -2,6 +2,7 @@ import React from 'react';
 import Header from '../components/Header/Header';
 // import '../styles/styles.scss';
 import RainbowBox from '../components/RainbowBox/RainbowBox';
+import Loader from '../components/Loader/Loader';
 
 export default function Demos() {
   return (
@@ -20,7 +21,9 @@ export default function Demos() {
       </section>
       <section>
         <p>skeleton loading elements</p>
-        <div>box</div>
+        <div>
+          <Loader />
+        </div>
       </section>
     </>
   );

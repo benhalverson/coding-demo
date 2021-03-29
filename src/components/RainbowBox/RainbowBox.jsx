@@ -1,12 +1,12 @@
 import './RainbowBox.scss';
 export default function RainbowBox() {
   return (
-    <div class='grid-container'>
-      <div class='top-bar'></div>
-      <div class='right-side'></div>
-      <div class='bottom-bar'></div>
-      <div class='left-side'></div>
-      <div class='content'>hello</div>
+    <div className='grid-container'>
+      <div className='top-bar'></div>
+      <div className='right-side'></div>
+      <div className='bottom-bar'></div>
+      <div className='left-side'></div>
+      <div className='content'>hello</div>
     </div>
   );
 }

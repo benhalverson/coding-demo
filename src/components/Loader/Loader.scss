@@ -1,0 +1,95 @@
+$box-width: 326px;
+$box-height: $box-width;
+$rectangle-width: 250px;
+$rectangle-height: 50px;
+
+.animate {
+  animation-duration: 800ms;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-name: skeleton;
+  animation-timing-function: linear;
+  &.circle-wrapper {
+    animation-name: circle-skeleton;
+  }
+}
+
+@keyframes skeleton {
+  0% {
+    background-position: -327px 0;
+  }
+  100% {
+    background-position: 327px 0;
+  }
+}
+
+@keyframes circle-skeleton {
+  0% {
+    background-position: -50px 0;
+  }
+  100% {
+    background-position: 50px 0;
+  }
+}
+
+.box-wrapper {
+  background-color: #bbbbba;
+  grid-area: box;
+  position: relative;
+  width: $box-width;
+  height: $box-height;
+}
+
+.rectangle-wrapper {
+  background-color: #90fc00;
+  border-radius: 6px;
+  grid-area: rectangle;
+  margin-top: 1rem;
+  position: relative;
+  width: $rectangle-width;
+  height: $rectangle-height;
+}
+
+.circle-wrapper {
+  background-color: #d80055;
+  grid-area: circle;
+  border-radius: 50%;
+  margin-top: 1rem;
+  position: relative;
+  width: 50px;
+  height: 50px;
+}
+
+.box-line {
+  background-image: linear-gradient(to right, #d8d8ff, #d8d8ff, #d8d8ff);
+  background-repeat: no-repeat;
+  position: relative;
+  height: $box-height;
+  width: $box-width;
+}
+
+.rectangle-line {
+  background-image: linear-gradient(to right, #6cd855, #6cd855, #6cd855);
+  background-repeat: no-repeat;
+  border-radius: 6px;
+  height: $rectangle-height;
+  position: relative;
+  width: $rectangle-width;
+}
+
+.circle-line {
+  background-image: linear-gradient(to right, #d84855, #d84855, #d84855);
+  background-repeat: no-repeat;
+  position: relative;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  gap: 0em 1em;
+  grid-template-areas: 'box box' 'rectangle circle';
+}
