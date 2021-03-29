@@ -38,7 +38,7 @@ $yellow: #ffd23d;
   border-top: 50px solid $red;
   border-left: 47px solid transparent;
   position: absolute;
-  left: 315px;
+  left: 330px;
 }
 
 .blue {
@@ -50,10 +50,10 @@ $yellow: #ffd23d;
 .blue::after {
   content: '';
   width: 0;
-  border-top: 100px solid $blue;
+  border-top: 50px solid $blue;
   border-right: 50px solid transparent;
   position: absolute;
-  left: 500px;
+  left: 540px;
 }
 
 .dark-green {
@@ -116,6 +116,6 @@ $yellow: #ffd23d;
   position: absolute;
   width: 350px;
   height: 350px;
-  left: 260px;
+  left: 285px;
   top: 238px;
 }
