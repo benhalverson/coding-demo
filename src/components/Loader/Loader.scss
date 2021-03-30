@@ -1,7 +1,6 @@
-$box-width: 326px;
-$box-height: $box-width;
-$rectangle-width: 250px;
-$rectangle-height: 50px;
+@import '../../styles/base/variables';
+@import '../../styles/base/animations';
+@import '../../styles/base/mixins';
 
 .animate {
   animation-duration: 800ms;
@@ -14,81 +13,48 @@ $rectangle-height: 50px;
   }
 }
 
-@keyframes skeleton {
-  0% {
-    background-position: -326px 0;
-  }
-  100% {
-    background-position: 326px 0;
-  }
-}
-
-@keyframes circle-skeleton {
-  0% {
-    background-position: -50px 0;
-  }
-  100% {
-    background-position: 50px 0;
-  }
-}
-
 .box-wrapper {
+  @include dimensions($box-width, $box-height);
   background-color: #bbbbba;
   grid-area: box;
-  position: relative;
-  width: $box-width;
-  height: $box-height;
 }
 
 .rectangle-wrapper {
+  @include dimensions($rectangle-width, $rectangle-height);
   background-color: #90fc00;
   border-radius: 6px;
   grid-area: rectangle;
   margin-top: 1rem;
-  position: relative;
-  width: $rectangle-width;
-  height: $rectangle-height;
 }
 
 .circle-wrapper {
+  @include dimensions(50px, 50px);
   background-color: #d80055;
   grid-area: circle;
   border-radius: 50%;
   margin-top: 1rem;
-  position: relative;
-  width: 50px;
-  height: 50px;
 }
 
 .box-line {
-  background-image: linear-gradient(to right, #d8d8ff, #d8d8ff, #d8d8ff);
-  background-repeat: no-repeat;
-  position: relative;
-  height: $box-height;
-  width: $box-width;
+  @include line($light-blue);
+  @include dimensions($box-width, $box-height);
 }
 
 .rectangle-line {
-  background-image: linear-gradient(to right, #6cd855, #6cd855, #6cd855);
-  background-repeat: no-repeat;
+  @include line($green);
+  @include dimensions($rectangle-width, $rectangle-height);
   border-radius: 6px;
-  height: $rectangle-height;
-  position: relative;
-  width: $rectangle-width;
 }
 
 .circle-line {
-  background-image: linear-gradient(to right, #d84855, #d84855, #d84855);
-  background-repeat: no-repeat;
+  @include line($red);
+  @include dimensions(50px, 50px);
   border-radius: 50%;
-  height: 50px;
-  position: relative;
-  width: 50px;
 }
 
 .container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-columns: $grid-col;
+  grid-template-rows: $grid-row;
   grid-template-areas: 'box box' 'rectangle circle';
 }

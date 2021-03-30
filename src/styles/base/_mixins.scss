@@ -1,0 +1,12 @@
+@import './variables';
+
+@mixin line($color) {
+  background-image: linear-gradient(to right, $color, $color, $color);
+  background-repeat: no-repeat;
+}
+
+@mixin dimensions($width, $height) {
+  position: relative;
+  height: $height;
+  width: $width;
+}
